@@ -14,8 +14,8 @@ let seattle = {
     avg: 6.3,
     AvgCookieCustomer:[],
     getNum: function () {
-        for (var i = 0 ; i < this.hour.length() ; i++){
-            let numberOfCustomer = math.floor(getRandomArbitrary(this.min, this.max));
+        for (var i = 0 ; i < this.hour.length ; i++){
+            let numberOfCustomer = Math.floor(getRandomCustomerNumber(this.min, this.max));
             this.AvgCookieCustomer.push(Math.floor(numberOfCustomer*this.avg));
         }
     },
@@ -25,6 +25,10 @@ let seattle = {
         */
 
        let parentElement = document.getElementById('Salmoon_Cookies');
+
+       let pElement = document.createElement('p');
+       parentElement.appendChild(pElement);
+       pElement.textContent = `${this.location} has a ${this.max} max value and ${this.min} min value.`;
 
        let h2Element = document.createElement('h2');
        h2Element.textContent = this.location;
@@ -38,19 +42,19 @@ let seattle = {
 
        let total = 0;
 
-       for (let i = 0 ; i <= this.hour.length() ; i++ ){
-           if (i == 14){
-               let liElement=document.createElement('li');
-               liElement.textContent= 'Total: ' + total + ' cookies';
-               ulElement.appendChild( liElement );
-           }
-           else{
+       for (let i = 0 ; i < this.hour.length ; i++ ){
+           
                let liElement = document.createElement('li');
                let cookiesNumber = this.getNum();
                liElement.textContent = this.hour[i] + ': ' + cookiesNumber + ' Cookies';
                ulElement.appendChild(liElement);
                total = total + cookiesNumber;
-           }
+               if (i == 13){
+                let liElement=document.createElement('li');
+                liElement.textContent= 'Total: ' + total + ' cookies';
+                ulElement.appendChild( liElement );
+            }
+           
        }
 
 
@@ -65,8 +69,8 @@ let tokyo = {
     avg: 1.2,
     AvgCookieCustomer:[],
     getNum: function () {
-        for (var i = 0 ; i < this.hour.length() ; i++){
-            let numberOfCustomer = math.floor(getRandomArbitrary(this.min, this.max));
+        for (var i = 0 ; i < this.hour.length ; i++){
+            let numberOfCustomer = Math.floor(getRandomCustomerNumber(this.min, this.max));
             this.AvgCookieCustomer.push(Math.floor(numberOfCustomer*this.avg));
         }
     },
@@ -92,20 +96,21 @@ let tokyo = {
 
         let total = 0;
 
-        for (let i = 0 ; i <= this.hour.length() ; i++ ){
-            if (i == 14){
-                let liElement=document.createElement('li');
-                liElement.textContent= 'Total: ' + total + ' cookies';
-                ulElement.appendChild( liElement );
-            }
-            else{
+        for (let i = 0 ; i < this.hour.length ; i++ ){
+            
                 let liElement = document.createElement('li');
                 let cookiesNumber = this.getNum();
                 liElement.textContent = this.hour[i] + ': ' + cookiesNumber + ' Cookies';
                 ulElement.appendChild(liElement);
                 total = total + cookiesNumber;
+                if (i == 13){
+                    let liElement=document.createElement('li');
+                    liElement.textContent= 'Total: ' + total + ' cookies';
+                    ulElement.appendChild( liElement );
+                }
             }
-        }
+
+        
     }
 };
 // Dubai obj
@@ -117,8 +122,8 @@ let dubai = {
     avg: 3.7,
     AvgCookieCustomer:[],
     getNum: function () {
-        for (var i = 0 ; i < this.hour.length() ; i++){
-            let numberOfCustomer = math.floor(getRandomArbitrary(this.min, this.max));
+        for (var i = 0 ; i < this.hour.length ; i++){
+            let numberOfCustomer = Math.floor(getRandomCustomerNumber(this.min, this.max));
             this.AvgCookieCustomer.push(Math.floor(numberOfCustomer*this.avg));
         }
     },
@@ -144,19 +149,19 @@ let dubai = {
 
         let total = 0;
 
-        for (let i = 0 ; i <= this.hour.length() ; i++ ){
-            if (i == 14){
-                let liElement=document.createElement('li');
-                liElement.textContent= 'Total: ' + total + ' cookies';
-                ulElement.appendChild( liElement );
-            }
-            else{
+        for (let i = 0 ; i < this.hour.length ; i++ ){
+            
                 let liElement = document.createElement('li');
                 let cookiesNumber = this.getNum();
                 liElement.textContent = this.hour[i] + ': ' + cookiesNumber + ' Cookies';
                 ulElement.appendChild(liElement);
                 total = total + cookiesNumber;
-            }
+                if (i == 13){
+                    let liElement=document.createElement('li');
+                    liElement.textContent= 'Total: ' + total + ' cookies';
+                    ulElement.appendChild( liElement );
+                }
+            
         }
     }
 };
@@ -169,8 +174,8 @@ let paris = {
     avg: 2.3,
     AvgCookieCustomer:[],
     getNum: function () {
-        for (var i = 0 ; i < this.hour.length() ; i++){
-            let numberOfCustomer = math.floor(getRandomArbitrary(this.min, this.max));
+        for (var i = 0 ; i < this.hour.length ; i++){
+            let numberOfCustomer = Math.floor(getRandomCustomerNumber(this.min, this.max));
             this.AvgCookieCustomer.push(Math.floor(numberOfCustomer*this.avg));
         }
     },
@@ -196,19 +201,19 @@ let paris = {
 
         let total = 0;
 
-        for (let i = 0 ; i <= this.hour.length() ; i++ ){
-            if (i == 14){
-                let liElement=document.createElement('li');
-                liElement.textContent= 'Total: ' + total + ' cookies';
-                ulElement.appendChild( liElement );
-            }
-            else{
+        for (let i = 0 ; i < this.hour.length ; i++ ){
+            
                 let liElement = document.createElement('li');
                 let cookiesNumber = this.getNum();
                 liElement.textContent = this.hour[i] + ': ' + cookiesNumber + ' Cookies';
                 ulElement.appendChild(liElement);
                 total = total + cookiesNumber;
-            }
+                if (i == 13){
+                    let liElement=document.createElement('li');
+                    liElement.textContent= 'Total: ' + total + ' cookies';
+                    ulElement.appendChild( liElement );
+                }
+            
         }
        
     }
@@ -222,8 +227,8 @@ let lima = {
     avg: 4.6,
     AvgCookieCustomer:[],
     getNum: function () {
-        for (var i = 0 ; i < this.hour.length() ; i++){
-            let numberOfCustomer = math.floor(getRandomArbitrary(this.min, this.max));
+        for (var i = 0 ; i < this.hour.length ; i++){
+            let numberOfCustomer = Math.floor(getRandomCustomerNumber(this.min, this.max));
             this.AvgCookieCustomer.push(Math.floor(numberOfCustomer*this.avg));
         }
     },
@@ -249,19 +254,18 @@ let lima = {
 
         let total = 0;
 
-        for (let i = 0 ; i <= this.hour.length() ; i++ ){
-            if (i == 14){
-                let liElement=document.createElement('li');
-                liElement.textContent= 'Total: ' + total + ' cookies';
-                ulElement.appendChild( liElement );
-            }
-            else{
+        for (let i = 0 ; i < this.hour.length ; i++ ){
+            
                 let liElement = document.createElement('li');
                 let cookiesNumber = this.getNum();
                 liElement.textContent = this.hour[i] + ': ' + cookiesNumber + ' Cookies';
                 ulElement.appendChild(liElement);
                 total = total + cookiesNumber;
-            }
+                if (i == 13){
+                    let liElement=document.createElement('li');
+                    liElement.textContent= 'Total: ' + total + ' cookies';
+                    ulElement.appendChild( liElement );
+                }
         }
     }
 };
