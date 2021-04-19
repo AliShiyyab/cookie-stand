@@ -3,7 +3,9 @@
 // Div Id -> Salmoon_Cookies
 
 function getRandomCustomerNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
+    min = Math.ceil( min );
+    max = Math.floor( max );
+    return Math.floor( Math.random() * ( max - min + 1 ) + min );
 }
 // Seattle obj
 let seattle = {
@@ -14,10 +16,7 @@ let seattle = {
     avg: 6.3,
     AvgCookieCustomer:[],
     getNum: function () {
-        for (var i = 0 ; i < this.hour.length ; i++){
-            let numberOfCustomer = Math.floor(getRandomCustomerNumber(this.min, this.max));
-            this.AvgCookieCustomer.push(Math.floor(numberOfCustomer*this.avg));
-        }
+        return Math.floor(getRandomCustomerNumber(this.min,this.max) * this.avg);
     },
     render: function(){
         /* in render :
@@ -69,10 +68,7 @@ let tokyo = {
     avg: 1.2,
     AvgCookieCustomer:[],
     getNum: function () {
-        for (var i = 0 ; i < this.hour.length ; i++){
-            let numberOfCustomer = Math.floor(getRandomCustomerNumber(this.min, this.max));
-            this.AvgCookieCustomer.push(Math.floor(numberOfCustomer*this.avg));
-        }
+        return Math.floor(getRandomCustomerNumber(this.min,this.max) * this.avg);
     },
     render: function(){
         /* in render :
@@ -121,11 +117,8 @@ let dubai = {
     max: 38,
     avg: 3.7,
     AvgCookieCustomer:[],
-    getNum: function () {
-        for (var i = 0 ; i < this.hour.length ; i++){
-            let numberOfCustomer = Math.floor(getRandomCustomerNumber(this.min, this.max));
-            this.AvgCookieCustomer.push(Math.floor(numberOfCustomer*this.avg));
-        }
+    getNum: function () {    
+        return Math.floor(getRandomCustomerNumber(this.min,this.max) * this.avg);
     },
     render: function(){
         /* in render :
@@ -174,10 +167,7 @@ let paris = {
     avg: 2.3,
     AvgCookieCustomer:[],
     getNum: function () {
-        for (var i = 0 ; i < this.hour.length ; i++){
-            let numberOfCustomer = Math.floor(getRandomCustomerNumber(this.min, this.max));
-            this.AvgCookieCustomer.push(Math.floor(numberOfCustomer*this.avg));
-        }
+        return Math.floor(getRandomCustomerNumber(this.min,this.max) * this.avg);
     },
     render: function(){
         /* in render :
@@ -227,10 +217,7 @@ let lima = {
     avg: 4.6,
     AvgCookieCustomer:[],
     getNum: function () {
-        for (var i = 0 ; i < this.hour.length ; i++){
-            let numberOfCustomer = Math.floor(getRandomCustomerNumber(this.min, this.max));
-            this.AvgCookieCustomer.push(Math.floor(numberOfCustomer*this.avg));
-        }
+        return Math.floor(getRandomCustomerNumber(this.min,this.max) * this.avg);
     },
     render: function(){
         /* in render :
