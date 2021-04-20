@@ -1,3 +1,17 @@
 #Body{
     background-color: coral;
 }
+table{
+    border-collapse: collapse;
+}
+td, th{
+    border: 1px solid #222;
+}
+th{
+    background-color: blue;
+    color: cornsilk;
+}
+td{
+    background-color: darkgreen;
+    color: white;
+}
