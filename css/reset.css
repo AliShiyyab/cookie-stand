@@ -1,5 +1,5 @@
 #Body{
-    background-color: coral;
+    background-color: tan;
 }
 table{
     border-collapse: collapse;
@@ -14,4 +14,32 @@ th{
 td{
     background-color: darkgreen;
     color: white;
+}
+p{
+    color: red;
+    font-size: xx-large;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+ul{
+    list-style: none;
+}
+ ul li
+{
+    display: inline-block;
+    padding: 10px;
+    border: 1px  solid black;
+    width: 45px;
+    height: 20px;
+    border-radius:26px
+}
+
+ ul li a
+{
+    text-decoration:blue;
+}
+
+ul :hover
+{
+background-color: black;
+color: white;
 }
