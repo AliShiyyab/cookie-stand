@@ -18,6 +18,7 @@ function cookies(max, min, AVG, location) {
     this.numberOfCockies = [];
     objArray.push(this);
 }
+
 header();
 cookies.prototype.randomCustomer = function () {
     for (var i = 0; i < hours.length; i++) {
@@ -28,6 +29,7 @@ cookies.prototype.randomCustomer = function () {
         this.numberOfCockies[i] = this.customerNum;
     }
 }
+
 cookies.prototype.Tables = function () {
     var tr = document.createElement('tr');
     h.appendChild(tr);
@@ -55,6 +57,7 @@ for (var i = 0; i < objArray.length; i++) {
     objArray[i].randomCustomer();
     objArray[i].Tables();
 }
+
 footer();
 function header() {
     var tr = document.createElement('tr');
@@ -71,6 +74,7 @@ function header() {
     tr.appendChild(cell3);
     cell3.textContent = 'Daily Location Total';
 }
+
 function footer() {
     var tr1 = document.createElement('tfoot');
     h.appendChild(tr1);
@@ -93,3 +97,21 @@ function footer() {
     cell6.textContent = TotalSum;
 }
 
+let form = document.getElementById('newForm');
+form.addEventListener('submit', function (event){
+    event.preventDefault();
+    let inputLocation = event.target.location.value;
+    let inputMaximum = parseInt(event.target.max.value);
+    let inputMinimum = parseInt(event.target.min.value);
+    let inputAVG = parseFloat(event.target.avg.value);
+    if(inputMaximum > inputMinimum){
+        h.removeChild(h.lastChild);
+        let objForm = new cookies(inputMaximum, inputMinimum, inputAVG, inputLocation);
+        objForm.randomCustomer();
+        objForm.Tables();
+        footer();
+    }
+    else{
+        alert("UnCorrect, you can try again and Max should be high value than min.");
+    }
+});
