@@ -1,5 +1,7 @@
 #NAV{
     text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
     background-color: red;
     color: white;
     border-radius: 1px;
@@ -7,10 +9,12 @@
 #Main{
     padding-left: 7%;
     padding-right: 7%;
-    border: 2px  solid black;
+    border: 4px black;
+    border-style: double;
     padding-top: 3%;
     font-weight: bold;
     font-style: italic;
+    width: 85%;
     display: inline-block;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -31,4 +35,10 @@ ul li{
     padding: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     filter: drop-shadow();
+}
+h1{
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: royalblue;
 }

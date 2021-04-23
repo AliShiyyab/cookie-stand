@@ -23,12 +23,16 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-
+h1{
+    text-align: center;
+    background-color: yellow;
+}
 #Body{
-    background-color: tan;
+    background-color: red;
 }
 
 table{
+    margin-left: 30%;
     border-collapse: collapse;
     border-spacing: 0;
 }
@@ -41,6 +45,20 @@ blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
+}
+
+#newForm{
+    background-color: blue;
+    color: white;
+    display: grid;
+    padding: 3px 5px;
+    margin-left: 30%;
+    margin-right: 35%;
+    border-radius: 2px;
+    border-style: dotted;
+    font-family: 'Nunito', sans-serif;
+    font-size: larger;
+    border-radius: 4px;
 }
 
 td, th{
@@ -88,10 +106,10 @@ color: white;
 }
 
 #FieldSet{
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: green;
     font-family: fantasy;
-
+    font-weight: bolder;
 }
 
 #addLocation{
@@ -103,4 +121,25 @@ color: white;
 
 #location{
     align-items: center;
+}
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  }
+#Sub{
+    background-color: blue; 
+    border: none;
+    color: white;
+    padding: 11px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;border-radius: 50%;
+    animation-name: example;
+  animation-duration: 4s;
+}
+#div1{
+    background-color: grey;
 }
